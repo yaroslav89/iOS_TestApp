@@ -41,17 +41,7 @@ class Task1ViewController: UIViewController, UITextFieldDelegate {
             if calculationResult.noResult {
                 resultValue.text = "No Result"
             } else {
-                var resultText = ""
-                
-                if calculationResult.x1 != nil {
-                    resultText += "x1: " + calculationResult.x1! + "  "
-                }
-                
-                if (calculationResult.x2 != nil) {
-                     resultText += "x2: " + calculationResult.x2!
-                }
-                
-                resultValue.text = resultText
+                resultValue.text = "\(calculationResult.x1 != nil ? "x1: \(calculationResult.x1!)" : "")  \(calculationResult.x2 != nil ? "x2: \(calculationResult.x2!)" : "")"
             }
         }
     }

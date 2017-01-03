@@ -78,7 +78,6 @@ class TaskHelper {
     static func sortArray(_ numbers: String) -> String {
         var numbersArr = numbers.components(separatedBy: ",").flatMap{Int($0)}
         let length = numbersArr.count
-        let label = "Sorted numbers: "
         
         for (i, _) in numbersArr.enumerated() {
             let next = i + 1
@@ -92,7 +91,7 @@ class TaskHelper {
                 }
             }
         }
-        return label + numbersArr.map{String($0)}.joined(separator: ", ")
+        return "Sorted numbers: \(numbersArr.map{String($0)}.joined(separator: ", ")) "
     }
 }
 
