@@ -29,14 +29,14 @@ class Task1ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func getResult(_ sender: UIButton) {
-        let A = valueA.text!
-        let B = valueB.text!
-        let C = valueC.text!
+        let A = Double(valueA.text!)
+        let B = Double(valueB.text!)
+        let C = Double(valueC.text!)
         
-        if A.isEmpty || B.isEmpty || C.isEmpty {
-            resultValue.text = "Provide all vallues"
+        if A == nil || B == nil || C == nil {
+            resultValue.text = "Provide correct vallues"
         } else {
-            let calculationResult = TaskHelper.resolveQuadraticFormula(a: Int(A)!, b: Int(B)!, c: Int(C)!)
+            let calculationResult = TaskHelper.resolveQuadraticFormula(a: A!, b: B!, c: C!)
             
             if calculationResult.noResult {
                 resultValue.text = "No Result"

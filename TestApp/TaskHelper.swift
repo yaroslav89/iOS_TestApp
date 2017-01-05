@@ -20,11 +20,7 @@ class TaskHelper {
         - x2: String x2 value
         - noResult: Bool return true if no result was found
     */
-    static func resolveQuadraticFormula(a:Int, b:Int, c:Int) -> (x1:String?, x2:String?, noResult:Bool) {
-        let a = Double(a)
-        let b = Double(b)
-        let c = Double(c)
-        
+    static func resolveQuadraticFormula(a:Double, b:Double, c:Double) -> (x1:String?, x2:String?, noResult:Bool) {
         let rootVal = (pow(b,2) - (4*a*c))
         
         if rootVal < 0 {
